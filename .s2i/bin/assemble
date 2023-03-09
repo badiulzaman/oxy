@@ -7,13 +7,11 @@ set -e
 
 echo "---> Installing application from source"
 cp -Rf /tmp/src/*.html ./
-
-
 DATE=`date "+%F"`
-echo "---> Creating info page"
-echo "Welcome to EX288" > /var/www/html/index.html
-echo "$DATE HELLO Folks its a test application for ex288 v4.10" >> /var/www/html/info.html
+echo "Welcome to ex288" >> /var/www/html/index.html
+echo "$DATE Hello testing info.html" > ./info.html
 ######## CUSTOMIZATION ENDS HERE ############
+
 
 if [ -d ./httpd-cfg ]; then
   echo "---> Copying httpd configuration files..."
